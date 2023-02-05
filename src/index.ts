@@ -1,11 +1,30 @@
-import {
-  WorkoutData,
-  ExerciseData,
-  SetData,
-  WeightTuple
-} from './types'
+export interface WorkoutData {
+  wtitle: string
+  wdate: string
+  exercises: ExerciseData[]
+  notes: string
+}
 
-export function parse (text: string): WorkoutData {
+export interface ExerciseData {
+  name: string
+  sets: SetData[]
+  notes: string
+}
+
+export interface SetData {
+  reps: number
+  weight?: WeightTuple
+}
+
+export type WeightTuple = [number, ('lbs' | 'kgs')?]
+
+
+/**
+ * Parses text to capture workout and exercise data.
+ * @param {string} text
+ * @returns {WorkoutData}
+ */
+export function torc (text: string): WorkoutData {
   let wtitle = ''
   let wdate = ''
   let notes = ''

@@ -1,0 +1,25 @@
+{
+  "name": "@timuism/torc",
+  "version": "0.0.7",
+  "description": "Capture workout & exercise data from text with a simple syntax",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist/**/*", "README.md", "package.json"],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://timuism@github.com/timuism/torc.git"
+  },
+  "author": "Timothy Long",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timuism/torc/issues"
+  },
+  "homepage": "https://github.com/timuism/torc#readme",
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
+}

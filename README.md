@@ -35,7 +35,7 @@ yarn add @timuism/torc
 
 ## Usage
 ```
-import torc from '@timuism/torc/dist/src/index'
+import {torc} from '@timuism/torc'
 
 const text = `
   *Chest and Arms* 2/5/2023
