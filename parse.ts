@@ -1,22 +1,9 @@
-interface WorkoutData {
-  wtitle: string
-  wdate: string
-  exercises: ExerciseData[]
-  notes: string
-}
-
-interface ExerciseData {
-  name: string
-  sets: SetData[]
-  notes: string
-}
-
-interface SetData {
-  reps: number
-  weight?: WeightTuple
-}
-
-type WeightTuple = [number, ('lbs' | 'kgs')?]
+import {
+  WorkoutData,
+  ExerciseData,
+  SetData,
+  WeightTuple
+} from './types'
 
 export function parse (text: string): WorkoutData {
   let wtitle = ''
