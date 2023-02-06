@@ -3,6 +3,7 @@ export interface WorkoutData {
   wdate: string
   exercises: ExerciseData[]
   notes: string
+  raw: string
 }
 
 export interface ExerciseData {
@@ -30,6 +31,9 @@ export function torc (text: string): WorkoutData {
   let notes = ''
   let tags = ''
   let exercises: any[] = []
+  
+  // save the raw text as is
+  const raw = text
 
   const isMultiLine = text.match(/[\r\n]/)
   if(isMultiLine) {
@@ -60,7 +64,7 @@ export function torc (text: string): WorkoutData {
   }
 
   // @todo: single line shorthand!
-  return { wtitle, wdate, exercises, notes } 
+  return { wtitle, wdate, exercises, notes, raw } 
 }
 
 function titleLine (line: string) {

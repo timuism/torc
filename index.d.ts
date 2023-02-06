@@ -3,6 +3,7 @@ export interface WorkoutData {
   wdate: string
   exercises: ExerciseData[]
   notes: string
+  raw: string
 }
 
 export interface ExerciseData {

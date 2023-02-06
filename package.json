@@ -1,6 +1,6 @@
 {
   "name": "@timuism/torc",
-  "version": "0.0.7",
+  "version": "0.0.10",
   "description": "Capture workout & exercise data from text with a simple syntax",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
